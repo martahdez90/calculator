@@ -4,14 +4,6 @@
 
 In this exercise you are given the legacy code of Payvision Calculator web app. Maintainance and new features development is your responsability.
 
-## Your tasks
-
-1. Code review: please list all good/bad practices you find in this application.
-2. It seems the app is buggy... Could you fix it?
-3. Add divide and multiply operations.
-4. How would do you test this app?
-5. Can you improve the UI/UX?
-
 You are allowed to change as much code as you consider.
 
 **Bonus:**
@@ -20,11 +12,11 @@ You are allowed to change as much code as you consider.
 
 ### 1. Code review
 
-Are you a good code reviewer? This would be one of your daily basis tasks.
-
-- Help our team, list good and bad practices you find, identify bugs or defects and suggest improvements. How would you refactorize it?
-
-Please add code inline comments or include them into your readme file.
+1. I would create the index.js file
+2. Include doctype and html structure
+3. Include meta tags to improve SEO
+4. Include css file
+5. Add Document title
 
 ### 2. Testing and bug fixing
 
@@ -50,11 +42,7 @@ We would like to automate testing of this application.
 
 ### 5. UI/UX design
 
-Do you consider yourself a good designer or UI/UX developer?
-
-- Improve the UI/UX to be more user friendly.
-
-Feel free to do any changes. Show us what you are capable to!
+1. Add favicon
 
 ## How to run the application using local server
 
