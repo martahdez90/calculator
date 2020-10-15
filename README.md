@@ -25,7 +25,8 @@ BAD PRACTICES
 7. A function should only have one return
 
 GOOD PRACTICES
-1. Code was well commented
+1. Code was well commented and structured
+2. the functions almost worked
 
 ### 2. Testing and bug fixing
 1. data-num="3" and data-num= "0" in the html are switched
@@ -38,14 +39,21 @@ GOOD PRACTICES
 Our product owner required us new features for this application. We would like the application new version to support multiplications and divisions.
 
 - Could you implement these new features?
+yes! let's do it!
 - Bear in mind usage of git-flow to track your changes.
-- Current version is 1.2.2 (see package.json version). Should we increase the version? How? Why?
+- Current version is 1.2.2 (see package.json version). 
+Should we increase the version? yes!
+How? on github
+Why? new features require a new version
 
 ### 4. Test automation
 
 We would like to automate testing of this application.
 
-- What kind of tests would you implement? Why?
+- What kind of tests would you implement? 
+Integration test using jest
+Why?
+it would be faster to see if there is any error when you implement a new feature
 
 **Bonus**: Implement the tests.
 
