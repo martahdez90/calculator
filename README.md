@@ -11,18 +11,27 @@ You are allowed to change as much code as you consider.
 1. Configure the application to allow use of keyboard numpad.
 
 ### 1. Code review
-
+BAD PRACTICES
 1. I would create the index.js file
 2. Include doctype and html structure
 3. Include meta tags to improve SEO
 4. Include css file
 5. Add Document title
+6. ES6 sintaxis{
+    let instead of var
+    use const
+    arrow function
+}
+7. A function should only have one return
+
+GOOD PRACTICES
+1. Code was well commented
 
 ### 2. Testing and bug fixing
+1. data-num="3" and data-num= "0" in the html are switched
+2. the sum and minus are also switched
+3. Refactoring
 
-Product quality, testing and finding bugs is really important at Payvision. This application seems it does not work fine...
-
-Test it and fix any potential bug you find. Feel free to document your findings in readme file or help yourself with commit messages.
 
 ### 3. New features implementation
 
@@ -43,6 +52,7 @@ We would like to automate testing of this application.
 ### 5. UI/UX design
 
 1. Add favicon
+2. Add main section
 
 ## How to run the application using local server
 
