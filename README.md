@@ -19,10 +19,11 @@ BAD PRACTICES
 5. Add Document title
 6. ES6 sintaxis{
     let instead of var
-    use const
+    const declaration
     arrow function
 }
 7. A function should only have one return
+8. You could refactor some functions like el
 
 GOOD PRACTICES
 1. Code was well commented and structured
