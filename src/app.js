@@ -1,29 +1,28 @@
 
 (function() {
     // Shortcut to get elements
-    var el = function(element) {
-      if (element.charAt(0) === "#") {
-        // If passed an ID...
-        return document.querySelector(element); // ... returns single element
-      }
-
-      return document.querySelectorAll(element); // Otherwise, returns a nodelist
+  /*refactor ES6*/
+  let el = (element) => {
+     // If passed an ID...returns single element
+      (element.charAt(0) === "#")? document.querySelector(element) : document.querySelectorAll(element);
+      // Otherwise, returns a nodelist
     };
 
-    // Variables
-    var viewer = el("#viewer"), // Calculator screen where result is displayed
-      equals = el("#equals"), // Equal button
-      nums = el(".num"), // List of numbers
-      ops = el(".ops"), // List of operators
-      theNum = "", // Current number
+    // variables
+  const viewer = el("#viewer"); // Calculator screen where result is displayed
+  const equals = el("#equals"); // Equal button
+  const nums = el(".num"); // List of numbers
+  const ops = el(".ops"); // List of operators
+  let theNum = "", // Current number
       oldNum = "", // First number
       resultNum, // Result
-      operator; // Batman
+      operator; // true or false
 
     // When: Number is clicked. Get the current number selected
-    var setNum = function() {
+  let setNum = () => {
+      // If a result was displayed, reset number
       if (resultNum) {
-        // If a result was displayed, reset number
+        
         theNum = this.getAttribute("data-num");
         resultNum = "";
       } else {
@@ -35,30 +34,29 @@
     };
 
     // When: Operator is clicked. Pass number to oldNum and save operator
-    var moveNum = function() {
+    let moveNum = () => {
       oldNum = theNum;
       theNum = "";
       operator = this.getAttribute("data-ops");
-
-      equals.setAttribute("data-result", ""); // Reset result in attr
+      equals.setAttribute("data-result", ""); // Reset result in attribute
     };
 
     // When: Equals is clicked. Calculate result
-    var displayNum = function() {
+    let displayNum = () => {
       // Convert string input to numbers
       oldNum = parseFloat(oldNum);
       theNum = parseFloat(theNum);
 
       // Perform operation
       switch (operator) {
-        case "plus":
+        case "plus"://sum
           resultNum = oldNum + theNum;
           break;
-
-        case "minus":
+        
+        case "minus"://subtraction
           resultNum = oldNum - theNum;
           break;
-
+        
         // If equal is pressed without an operator, keep number and continue
         default:
           resultNum = theNum;
@@ -86,22 +84,22 @@
     };
 
     // When: Clear button is pressed. Clear everything
-    var clearAll = function() {
+    let clearAll = () => {
       oldNum = "";
       theNum = "";
-      viewer.innerHTML = "...";
+      viewer.innerHTML = "0";
       equals.setAttribute("data-result", resultNum);
     };
 
     /* The click events */
 
     // Add click event to numbers
-    for (var i = 0, l = nums.length; i < l; i++) {
+    for (let i = 0, l = nums.length; i < l; i++) {
       nums[i].onclick = setNum;
     }
 
     // Add click event to operators
-    for (var i = 0, l = ops.length; i < l; i++) {
+    for (let i = 0, l = ops.length; i < l; i++) {
       ops[i].onclick = moveNum;
     }
 
