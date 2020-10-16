@@ -30,7 +30,8 @@
         theNum += this.getAttribute("data-num");
       }
 
-      viewer.innerHTML = theNum; // Display current number
+    viewer.innerHTML = theNum; // Display current number
+    return(theNum)
     };
 
     // When: Operator is clicked. Pass number to oldNum and save operator
@@ -81,6 +82,7 @@
       // Now reset oldNum & keep result
       oldNum = 0;
       theNum = resultNum;
+      return resultNum;
     };
 
     // When: Clear button is pressed. Clear everything
@@ -94,18 +96,31 @@
     /* The click events */
 
     // Add click event to numbers
-    for (let i = 0, l = nums.length; i < l; i++) {
+  let clickNumbers = () => {
+      for (let i = 0, l = nums.length; i < l; i++) {
       nums[i].onclick = setNum;
     }
-
+  }
     // Add click event to operators
+  let clickOperators = () => {
     for (let i = 0, l = ops.length; i < l; i++) {
       ops[i].onclick = moveNum;
     }
-
-    // Add click event to equal sign
+  }
+  let clickEqual = () => {
+      // Add click event to equal sign
     equals.onclick = displayNum;
-
+  }
+  
+  let clickClear = () => {
     // Add click event to clear button
     el("#clear").onclick = clearAll;
+  }  
+  
+  clickNumbers();
+  clickOperators()
+  clickEqual();
+  clickClear();
+  
+  module.exports = { setNum, moveNum, displayNum, clearAll, clickNumbers, clickOperators, clickEqual, clickClear };
   })();
