@@ -22,8 +22,10 @@ BAD PRACTICES
     const declaration
     arrow function
 }
-7. A function should only have one return
+7. A function should only have one return and every function should return something to know that it worked
 8. You could refactor some functions like el
+9. A function should only do one thing
+10. get click events into functions
 
 GOOD PRACTICES
 1. Code was well commented and structured
@@ -51,10 +53,11 @@ Why? new features require a new version
 
 We would like to automate testing of this application.
 
-- What kind of tests would you implement? 
-Integration test using jest
-Why?
-it would be faster to see if there is any error when you implement a new feature
+
+- What kind of tests would you implement?
+I would implement unit testing to validate that each unit of the software code performs as expected. 
+- Why?
+To see if every part of the application works and avoid future bugs
 
 **Bonus**: Implement the tests.
 
