@@ -56,6 +56,8 @@ We would like to automate testing of this application.
 
 - What kind of tests would you implement?
 I would implement unit testing to validate that each unit of the software code performs as expected. 
+Also integration tests and use interface tests (end to end)
+
 - Why?
 To see if every part of the application works and avoid future bugs
 

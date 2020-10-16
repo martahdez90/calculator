@@ -129,5 +129,4 @@
   clickEqual();
   clickClear();
   
-  module.exports = { setNum, moveNum, displayNum, clearAll, clickNumbers, clickOperators, clickEqual, clickClear };
   })();
