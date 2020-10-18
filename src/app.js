@@ -58,6 +58,12 @@
       case "minus":
         resultNum = oldNum - theNum;
         break;
+      case "mult":
+          resultNum = oldNum * theNum;
+          break;
+      case "div":
+          resultNum = oldNum / theNum;
+          break;
 
       // If equal is pressed without an operator, keep number and continue
       default:
@@ -89,7 +95,7 @@
   var clearAll = function() {
     oldNum = "";
     theNum = "";
-    viewer.innerHTML = "...";
+    viewer.innerHTML = "0";
     equals.setAttribute("data-result", resultNum);
   };
 

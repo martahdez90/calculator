@@ -25,7 +25,7 @@ BAD PRACTICES
 7. A function should only have one return and every function should return something to know that it worked
 8. You could refactor some functions like el
 9. A function should only do one thing
-10. get click events into functions
+10. html: btn id doesn't really identify every button. It should be "btn1" or "btnSum"
 
 GOOD PRACTICES
 1. Code was well commented and structured
@@ -34,7 +34,7 @@ GOOD PRACTICES
 ### 2. Testing and bug fixing
 1. data-num="3" and data-num= "0" in the html are switched
 2. the sum and minus are also switched
-3. Refactoring
+
 
 
 ### 3. New features implementation
@@ -62,6 +62,7 @@ Also integration tests and use interface tests (end to end)
 To see if every part of the application works and avoid future bugs
 
 **Bonus**: Implement the tests.
+Only user interface tests were implemented
 
 ### 5. UI/UX design
 
