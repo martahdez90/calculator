@@ -116,4 +116,34 @@
 
   // Add click event to clear button
   el("#clear").onclick = clearAll;
+
+
+/*Allow keyboard*/
+// let keyboard = () => {
+//   window.addEventListener('keydown', (event) => {
+//     //document.getElementById('viewer').innerHTML = event.key
+//     console.log(event.key)
+//     switch (event.key) {
+//       case '1':  
+//         setNum;
+//         console.log("setNum")
+//         break;
+//       case '+':
+//         moveNum;
+//         console.log("moveNum")
+//         break;
+//       case '=':
+//         displayNum;
+//         console.log("displayNum")
+//         break;
+//       default:
+//         alert("la cagaste")
+//     }
+      
+//         return (event.key)
+//  });   
+//  }
+ 
+ // keyboard()
+  
 })();
