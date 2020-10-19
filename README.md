@@ -8,7 +8,7 @@ You are allowed to change as much code as you consider.
 
 **Bonus:**
 
-1. Configure the application to allow use of keyboard numpad.
+1. Configure the application to allow use of keyboard numpad. **DONE!!**
 
 ### 1. Code review
 BAD PRACTICES
@@ -36,7 +36,6 @@ GOOD PRACTICES
 2. the sum and minus are also switched
 
 
-
 ### 3. New features implementation
 
 Our product owner required us new features for this application. We would like the application new version to support multiplications and divisions.
@@ -62,7 +61,7 @@ Also integration tests and use interface tests (end to end)
 To see if every part of the application works and avoid future bugs
 
 **Bonus**: Implement the tests.
-Only user interface tests were implemented
+- user interface tests implemented
 
 ### 5. UI/UX design
 

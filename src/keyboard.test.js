@@ -46,19 +46,14 @@ describe("Test de keyboard", () => {
         )
         //type the number
         await page.type('#viewer', '1');
+        await page.type('#viewer', '+');
         await page.type('#viewer', '2');
-        await page.type('#viewer', '3');
-        await page.type('#viewer', '4');
-        await page.type('#viewer', '5');
-        await page.type('#viewer', '6');
-        await page.type('#viewer', '7');
-        await page.type('#viewer', '8');
-        await page.type('#viewer', '9');
-        await page.type('#viewer', '0');
+        await page.type('#viewer', 'Enter');
+     
         // await expect(page).toClick('button', { text: '2' })
         //resolve
         const testResult = await page.$eval('#viewer', el => el.textContent)
-        expect(testResult).toBe('0')
+        expect(testResult).toBe('3')
     }, 30000);
 });
   
