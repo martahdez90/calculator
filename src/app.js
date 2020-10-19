@@ -124,7 +124,6 @@ let keyboard = () => {
     "keydown",
     (event) => {
       keyPressed = event.key;
-      console.log(keyPressed)
       //if the keypressed is a number
       if (
         keyPressed === "0" ||
@@ -178,7 +177,7 @@ let keyboard = () => {
             break;
           // If KeyPressed is not a number;
           default:
-            alert("solo numeros u operadores")
+            viewer.innerHTML = "number please!"
         }
       }
     }
