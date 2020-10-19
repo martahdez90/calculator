@@ -55,7 +55,7 @@ let keyboard = () => {
             theNum = "";
             operator = "div";
             break;
-            case "c":
+            case "Backspace":
               clearAll();
               break;
             case "Enter"://press start 

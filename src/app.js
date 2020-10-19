@@ -124,7 +124,6 @@ let keyboard = () => {
     "keydown",
     (event) => {
       keyPressed = event.key;
-      console.log(keyPressed)
       //if the keypressed is a number
       if (
         keyPressed === "0" ||
@@ -170,7 +169,7 @@ let keyboard = () => {
             theNum = "";
             operator = "div";
             break;
-          case "c"://clear
+          case "Backspace"://clear
             clearAll();
             break;
           case "Enter"://press start 
@@ -178,7 +177,7 @@ let keyboard = () => {
             break;
           // If KeyPressed is not a number;
           default:
-            alert("solo numeros u operadores")
+            viewer.innerHTML = "number please!"
         }
       }
     }
