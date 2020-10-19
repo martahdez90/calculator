@@ -165,7 +165,7 @@ describe("operations", () => {
         await page.goto(
             'http://localhost:8082/src/index.html'
         )
-        //click 2 + 3 =
+        //click 80 / 40 =
         await page.click('#btn8');
         await page.click('#btn0');
         await page.click('#btnDiv');

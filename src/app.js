@@ -1,7 +1,7 @@
 
 (function() {
   // Shortcut to get elements
-  var el = function(element) {
+  let el = function(element) {
     if (element.charAt(0) === "#") {
       // If passed an ID...
       return document.querySelector(element); // ... returns single element
@@ -10,18 +10,19 @@
     return document.querySelectorAll(element); // Otherwise, returns a nodelist
   };
 
-  // Variables
-  var viewer = el("#viewer"), // Calculator screen where result is displayed
+  // letiables
+  let viewer = el("#viewer"), // Calculator screen where result is displayed
     equals = el("#equals"), // Equal button
     nums = el(".num"), // List of numbers
     ops = el(".ops"), // List of operators
     theNum = "", // Current number
-    oldNum = "", // First number
+    oldNum = "",
+    keyPressed, // First number
     resultNum, // Result
     operator; // Batman
 
   // When: Number is clicked. Get the current number selected
-  var setNum = function() {
+  let setNum = function() {
     if (resultNum) {
       // If a result was displayed, reset number
       theNum = this.getAttribute("data-num");
@@ -35,7 +36,7 @@
   };
 
   // When: Operator is clicked. Pass number to oldNum and save operator
-  var moveNum = function() {
+  let moveNum = function() {
     oldNum = theNum;
     theNum = "";
     operator = this.getAttribute("data-ops");
@@ -44,7 +45,7 @@
   };
 
   // When: Equals is clicked. Calculate result
-  var displayNum = function() {
+  let displayNum = function() {
     // Convert string input to numbers
     oldNum = parseFloat(oldNum);
     theNum = parseFloat(theNum);
@@ -92,7 +93,7 @@
   };
 
   // When: Clear button is pressed. Clear everything
-  var clearAll = function() {
+  let clearAll = function() {
     oldNum = "";
     theNum = "";
     viewer.innerHTML = "0";
@@ -102,12 +103,12 @@
   /* The click events */
 
   // Add click event to numbers
-  for (var i = 0, l = nums.length; i < l; i++) {
+  for (let i = 0, l = nums.length; i < l; i++) {
     nums[i].onclick = setNum;
   }
 
   // Add click event to operators
-  for (var i = 0, l = ops.length; i < l; i++) {
+  for (let i = 0, l = ops.length; i < l; i++) {
     ops[i].onclick = moveNum;
   }
 
@@ -116,4 +117,75 @@
 
   // Add click event to clear button
   el("#clear").onclick = clearAll;
+
+  /*NEW: the keyboard events*/
+let keyboard = () => {
+  window.addEventListener(
+    "keydown",
+    (event) => {
+      keyPressed = event.key;
+      console.log(keyPressed)
+      //if the keypressed is a number
+      if (
+        keyPressed === "0" ||
+        keyPressed === "1" ||
+        keyPressed === "2" ||
+        keyPressed === "3" ||
+        keyPressed === "4" ||
+        keyPressed === "5" ||
+        keyPressed === "6" ||
+        keyPressed === "7" ||
+        keyPressed === "8" ||
+        keyPressed === "9"
+      ) {
+        if (resultNum) {
+          // If a result was displayed, reset number
+          theNum = keyPressed;
+          resultNum = "";
+        } else {
+          // Otherwise, add digit to previous number (this is a string!)
+          theNum += keyPressed;
+        }
+        viewer.innerHTML = theNum;
+      } else {
+        //if keyPress it's not a number
+        switch (keyPressed) {
+          case "+":
+            oldNum = theNum;
+            theNum = "";
+            operator = "plus";
+            break;
+          case "-":
+            oldNum = theNum;
+            theNum = "";
+            operator = "minus";
+            break;
+          case "*":
+            oldNum = theNum;
+            theNum = "";
+            operator = "mult";
+            break;
+          case "/":
+            oldNum = theNum;
+            theNum = "";
+            operator = "div";
+            break;
+          case "c"://clear
+            clearAll();
+            break;
+          case "Enter"://press start 
+            displayNum();
+            break;
+          // If KeyPressed is not a number;
+          default:
+            alert("solo numeros u operadores")
+        }
+      }
+    }
+  );
+};
+  keyboard();
+  
+
+
 })();
