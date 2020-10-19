@@ -16,20 +16,28 @@
   <!-- Add css  -->
   <link rel="stylesheet" href="./style.css">
   <!-- Add favicon  -->
+
   <link rel="icon" href="./favicon.png" type="image/png" sizes="32x32">
+
+  <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+
 </head>
 <body>
+  <h1>¡LETS PRACTICE SOME MATHS!</h1>
  <h2>Payvision Calculator</h2>
 
 <!-- add main to improve accesibility -->
 <main id="calculator" class="calculator">
-  <button id="clear" class="clear">C</button>
 
-  <div id="viewer" class="viewer">0</div>
+  <div id="viewer" class="viewer">
+    <p>0</p>
+  </div>
 
-  <button id="btn9" class="num" data-num="9">9</button>
-  <button id="btn8" class="num" data-num="8">8</button>
-  <button id="btn7" class="num" data-num="7">7</button>
+<button id="btn7" class="num" data-num="7">7</button>
+<button id="btn8" class="num" data-num="8">8</button>
+<button id="btn9" class="num" data-num="9">9</button>
+  
+  
   <button id="btnPlus" data-ops="plus" class="ops">+</button>
 
   <button id="btn4" class="num" data-num="4">4</button>
@@ -37,15 +45,19 @@
   <button id="btn6" class="num" data-num="6">6</button>
   <button id="btnMinus" data-ops="minus" class="ops">-</button>
 
-  <button id="btn0" class="num" data-num="0">0</button>
   <button id="btn1" class="num" data-num="1">1</button>
   <button id="btn2" class="num" data-num="2">2</button>
-
   <button id="btn3" class="num" data-num="3">3</button>
-  <button id="btnDot" class="num" data-num=".">.</button>
-  <button id="equals" class="equals" data-result="">=</button>
   <button id="btnMult" data-ops="mult" class="ops">x</button>
-  <button id="btnDiv" data-ops="div" class="ops">/</button>
+
+  <button id="clear" class="clear">C</button>
+  <button id="btn0" class="num" data-num="0">0</button>
+  <button id="btnDot" class="num" data-num=".">.</button>
+  <button id="btnDiv" data-ops="div" class="ops">/
+
+  <button id="equals" class="equals" data-result="">=</button>
+  
+  </button>
 </main>
 
 <script src="app.js"></script>
