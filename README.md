@@ -67,6 +67,8 @@ To see if every part of the application works and avoid future bugs
 
 1. Add favicon
 2. Add main section
+3. Change the order of the buttons
+4. Font: 'Paytone One', sans-serif;
 
 ## How to run the application using local server
 

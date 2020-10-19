@@ -170,7 +170,7 @@ let keyboard = () => {
             theNum = "";
             operator = "div";
             break;
-          case "c"://clear
+          case "Backspace"://clear
             clearAll();
             break;
           case "Enter"://press start 
