@@ -34,6 +34,7 @@ GOOD PRACTICES
 ### 2. Testing and bug fixing
 1. data-num="3" and data-num= "0" in the html are switched
 2. the sum and minus are also switched
+3. When you /0 the calculator breaks so now the result shown it's "0" instead of infinity.
 
 
 ### 3. New features implementation
@@ -69,6 +70,7 @@ To see if every part of the application works and avoid future bugs
 2. Add main section
 3. Change the order of the buttons
 4. Font: 'Paytone One', sans-serif;
+5. I fixed the broken class so the calculator doesn't disappear
 
 ## How to run the application using local server
 

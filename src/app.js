@@ -63,7 +63,8 @@
           resultNum = oldNum * theNum;
           break;
       case "div":
-          resultNum = oldNum / theNum;
+        resultNum = oldNum / theNum;
+        //the result is infinity when theNum is 0 so resultNum was changed to 0 instead of infinity
           break;
 
       // If equal is pressed without an operator, keep number and continue
@@ -77,9 +78,9 @@
         // If result is not a number; set off by, eg, double-clicking operators
         resultNum = "You broke it!";
       } else {
-        // If result is infinity, set off by dividing by zero
-        resultNum = "Look at what you've done";
-        el("#calculator").classList.add("broken"); // Break calculator
+        // If result is infinity, set off by writting 0
+        resultNum = "0";
+        
       }
     }
 
@@ -135,7 +136,8 @@ let keyboard = () => {
         keyPressed === "6" ||
         keyPressed === "7" ||
         keyPressed === "8" ||
-        keyPressed === "9"
+        keyPressed === "9" ||
+        keyPressed === "."
       ) {
         if (resultNum) {
           // If a result was displayed, reset number

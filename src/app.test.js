@@ -153,7 +153,7 @@ describe("operations", () => {
         browser.close();
     }, 30000);
 
-    test('Division 80 / 4 = 20', async () => {
+    test('Division 9 / 0 = 0', async () => {
         //start the browser
         const browser = await puppeteer.launch({
             headless: false,
@@ -166,14 +166,13 @@ describe("operations", () => {
             'http://localhost:8082/src/index.html'
         )
         //click 80 / 40 =
-        await page.click('#btn8');
-        await page.click('#btn0');
+        await page.click('#btn9');
         await page.click('#btnDiv');
-        await page.click('#btn4');
+        await page.click('#btn0');
         await page.click('#equals');
         //pass number to the viewer
         const finalText = await page.$eval('#viewer', el => el.textContent);
-        expect(finalText).toBe('20');
-        browser.close();
+        expect(finalText).toBe('0');
+        // browser.close();
     }, 30000);
 })
